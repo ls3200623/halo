@@ -14,11 +14,16 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
 
-    # H2 database configuration.
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/.halo/db/halo
-    username: admin
-    password: 123456
+  #    # H2 database configuration.
+  #    driver-class-name: org.h2.Driver
+  #    url: jdbc:h2:file:~/.halo/db/halo
+  #    username: admin
+  #    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/halo?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&useSSL=false&serverTimezone=UTC
+
 
   h2:
     console:
